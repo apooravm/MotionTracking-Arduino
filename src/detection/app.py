@@ -3,7 +3,7 @@ import handTrackingModule as handTrack
 import time
 
 detector = handTrack.HandDetector()
-cap = cv.VideoCapture(0)
+capture = cv.VideoCapture(0)
 
 prevTime = 0
 currTime = 0
@@ -16,7 +16,7 @@ def drawCoordsOnImage(image, coords_ALL):
     return image
 
 while True:
-    success, img = cap.read()
+    success, img = capture.read()
     coords = detector.getHandCoords(cv.cvtColor(img, cv.COLOR_BGR2RGB))
     img = drawCoordsOnImage(img, coords)
 
@@ -28,4 +28,8 @@ while True:
     cv.putText(img, kl, (10, 60), cv.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
 
     cv.imshow("img", img)
-    cv.waitKey(1)
+    if cv.waitKey(20) & 0xFF == ord('q'):
+        break
+
+capture.release()
+cv.destroyAllWindows()
