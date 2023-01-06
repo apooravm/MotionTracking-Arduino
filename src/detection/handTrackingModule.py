@@ -28,11 +28,11 @@ class HandDetector():
 
 if __name__ == "__main__":
     import cv2 as cv
-    cap = cv.VideoCapture(0)
+    capture = cv.VideoCapture(0)
     detector = HandDetector()
     detector.drawLines = True
     while True:
-        success, img = cap.read()
+        success, img = capture.read()
 
         results = detector.hands.process(cv.cvtColor(img, cv.COLOR_BGR2RGB))
         if results.multi_hand_landmarks:
@@ -40,4 +40,8 @@ if __name__ == "__main__":
                 detector.mpDraw.draw_landmarks(img, hand, detector.mpHands.HAND_CONNECTIONS)
 
         cv.imshow("image", img)
-        cv.waitKey(1)
+        if cv.waitKey(20) & 0xFF == ord('q'):
+            break
+
+    capture.release()
+    cv.destroyAllWindows()
