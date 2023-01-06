@@ -33,4 +33,4 @@ locate `/src/arduino-sketch/sketch.json`
 * `arduino-cli lib install <lib Name>`
 * `arduino-cli lib install <lib name>@1.0.0`
 * `arduino-cli lib install --git-url https://github.com/arduino-libraries/WiFi101.git`
-* `arduino-cli lib install --zip-path /path/to/WiFi101.zip /path/to/ArduinoBLE.zip`
+* `arduino-cli lib install --zip-path /path/to/<library>.zip`
