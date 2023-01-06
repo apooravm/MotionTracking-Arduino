@@ -14,11 +14,11 @@ locate `/src/arduino-sketch/sketch.json`
 
 <b>Uno</b>
 > "fqbn": "arduino:avr:uno"
-    "name": "Arduino Uno"
+> "name": "Arduino Uno"
 
 <b>Nano (old Bootloader)</b>
-> "fqbn": "arduino:avr:nano:cpu=atmega328old"
-    "name": "Arduino Nano"
+> "fqbn": "arduino:avr:nano:cpu=atmega328old"   
+> "name": "Arduino Nano"
 
 ### Arduino-CLI 
 
