@@ -1,7 +1,7 @@
 {
   "cpu": {
-    "fqbn": "arduino:avr:nano:cpu=atmega328old",
-    "name": "Arduino Nano",
-    "port": "serial://COM4"
+    "fqbn": "arduino:avr:uno",
+    "name": "Arduino Uno",
+    "port": "serial://COM5"
   }
 }

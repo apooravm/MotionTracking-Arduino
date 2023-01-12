@@ -7,7 +7,7 @@ name = "pypi"
 opencv-python = "*"
 mediapipe = "*"
 pyserial = "*"
-pywin32 = "*"
+pynput = "*"
 
 [dev-packages]
 
