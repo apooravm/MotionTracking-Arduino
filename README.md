@@ -71,3 +71,8 @@ This input is then read from the incoming serial data by the arduino board. Thes
 - Webcam
 - OpenCV
 - pyserial
+
+---
+
+**Diagram**
+<img src="circuit1.jpg">
